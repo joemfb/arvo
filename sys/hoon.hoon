@@ -8440,10 +8440,19 @@
     |=  {pre/(unit tyke) pof/(unit {p/@ud q/tyke})}
     ^-  (unit (list twig))
     =-  ?^(- - ~&(%posh-fail -))
-    =/  wom/(list twig)  (turn wer |=(a/@ta [%sand %ta a]))
     %+  biff
-      ?~  pre  `u=wom
-      %+  bind  (poon wom u.pre)
+      =/  wom/(list twig)
+        (turn wer |=(a/@ta [%sand %ta a]))
+      ?~  pre
+        `u=wom
+      %+  bind
+        ?.  ?&  ?=(^ u.pre)            ::  XX handle initial {vane}{care}
+                ?=(^ i.u.pre)
+                ?=({$sand ?($ta $tas) @} u.i.u.pre)
+                =(2 (met 3 q.u.i.u.pre))
+            ==
+          (poon wom u.pre)
+        (both i.u.pre (poon wom t.u.pre))
       |=  moz/(list twig)
       ?~(pof moz (weld moz (slag (lent u.pre) wom)))
     |=  yez/(list twig)
