@@ -8399,8 +8399,8 @@
   ++  mota  %+  cook
               |=({a/tape b/tape} (rap 3 (weld a b)))
             ;~(plug (star low) (star hig))
-  ::
-  ++  plex
+  ::                                                    ::  ++plex:vast
+  ++  plex                                              ::  path from $conl twig
     |=  gen/twig  ^-  (unit path)
     ?:  ?=({$dbug *} gen)
       $(gen q.gen)
@@ -8435,8 +8435,8 @@
     ?@  i.i.ruw
       $(i.ruw t.i.ruw, cah [i.i.ruw cah])
     $(i.ruw t.i.ruw, cah ~, yun [p.i.i.ruw (wod cah yun)])
-  ::
-  ++  posh
+  ::                                                    :: ++posh:vast
+  ++  posh                                              :: path placeholders
     |=  {pre/(unit tyke) pof/(unit {p/@ud q/tyke})}
     ^-  (unit (list twig))
     =-  ?^(- - ~&(%posh-fail -))
@@ -8461,23 +8461,23 @@
     =+  [moz=(scag p.u.pof zey) gul=(slag p.u.pof zey)]
     =+  zom=(poon (flop moz) q.u.pof)
     ?~(zom ~ `(weld (flop gul) u.zom))
-  ::
-  ++  poon
+  ::                                                    :: ++poon:vast
+  ++  poon                                              :: unify path & context
     |=  {pag/(list twig) goo/tyke}
     ^-  (unit (list twig))
     ?~  goo  `~
     %+  both
       ?^(i.goo i.goo ?~(pag ~ `u=i.pag))
     $(goo t.goo, pag ?~(pag ~ t.pag))
-  ::
-  ++  poor
+  ::                                                    :: ++poor:vast
+  ++  poor                                              :: %-prefixed path
     %+  sear  posh
     ;~  plug
       (stag ~ gash)
       ;~(pose (stag ~ ;~(pfix cen porc)) (easy ~))
     ==
-  ::
-  ++  porc
+  ::                                                    :: ++porc:vast
+  ++  porc                                              :: % prefix count
     ;~  plug
       (cook |=(a/(list) (lent a)) (star cen))
       ;~(pfix fas gash)
