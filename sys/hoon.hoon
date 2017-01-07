@@ -8377,15 +8377,18 @@
               |=  a/(list tyke)  ^-  tyke
               ?~(a ~ (weld i.a $(a t.a)))
             (more fas gasp)
-  ++  gasp  ;~  pose
+  ::                                                    :: ++gasp:vast
+  ++  gasp  =/  nils                                    :: parse /= placeholder
+              |=(a/(list) (reap (lent a) ~))
+            ;~  pose
               %+  cook
                 |=({a/tyke b/tyke c/tyke} :(weld a b c))
               ;~  plug
-                (cook |=(a/(list) (turn a |=(b/* ~))) (star tis))
+                (cook nils (star tis))
                 (cook |=(a/twig [[~ a] ~]) hasp)
-                (cook |=(a/(list) (turn a |=(b/* ~))) (star tis))
+                (cook nils (star tis))
               ==
-              (cook |=(a/(list) (turn a |=(b/* ~))) (plus tis))
+              (cook nils (plus tis))
             ==
   ++  glam  ~+((glue ace))
   ++  hasp  ;~  pose
