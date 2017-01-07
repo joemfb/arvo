@@ -8440,7 +8440,7 @@
     |=  {pre/(unit tyke) pof/(unit {p/@ud q/tyke})}
     ^-  (unit (list twig))
     =-  ?^(- - ~&(%posh-fail -))
-    =+  wom=(poof wer)
+    =/  wom/(list twig)  (turn wer |=(a/@ta [%sand %ta a]))
     %+  biff
       ?~  pre  `u=wom
       %+  bind  (poon wom u.pre)
@@ -8453,7 +8453,6 @@
     =+  zom=(poon (flop moz) q.u.pof)
     ?~(zom ~ `(weld (flop gul) u.zom))
   ::
-  ++  poof  |=(pax/path ^-((list twig) (turn pax |=(a/@ta [%sand %ta a]))))
   ++  poon
     |=  {pag/(list twig) goo/tyke}
     ^-  (unit (list twig))
