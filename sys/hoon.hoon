@@ -5426,7 +5426,6 @@
     {$conl p/(list twig)}                                ::  :~ [p ~]
     {$conp p/(list twig)}                                ::  :* p as a tuple
   ::                                            ::::::  invocations
-    {$bunt p/twig}                                      ::  %$
     {$keep p/wing q/(list (pair wing twig))}            ::  %_
     {$lace p/twig q/twig}                               ::  %.
     {$call p/twig q/(list twig)}                        ::  %-
