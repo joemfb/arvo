@@ -5610,17 +5610,29 @@
   |=  yed/(list span)
   =|  lez/(set span)
   |-  ^-  span
-  ?~  yed
-    ?~  lez  %void
-    ?:  ?=({* $~ $~} lez)  n.lez
-    [%fork lez]
-  %=    $
+  ?^  yed
+    %=  $
       yed  t.yed
-      lez
-    ?:  =(%void i.yed)  lez
-    ?:  ?=({$fork *} i.yed)  (~(uni in lez) p.i.yed)
-    (~(put in lez) i.yed)
-  ==
+      lez  ?+  i.yed    (~(put in lez) i.yed)
+             {$fork *}  (~(uni in lez) p.i.yed)
+             $void      lez
+    ==     ==
+  |-  ^-  span
+  ?:  =(~ lez)
+    %void
+  ?:  ?=({* $~ $~} lez)
+    n.lez
+  =;  sep/(pair (set span) (set span))
+    ?:  ?=({* $~ $~} p.sep)  [%cell n.p.sep $(lez q.sep)]
+    ?:  ?=({* $~ $~} q.sep)  [%cell $(lez p.sep) n.q.sep]
+    [%fork lez]
+  ?.  (~(all in lez) |=(a/span ?=({$cell *} a)))
+    [~ ~]
+  %+  roll
+    (~(tap in lez))
+  |=  {a/span b/(pair (set span) (set span))}
+  ?>  ?=({$cell *} a)
+  [(~(put in p.b) p.a) (~(put in q.b) q.a)]
 ::
 ++  cove                                                ::  extract [0 *] axis
   |=  nug/nock
