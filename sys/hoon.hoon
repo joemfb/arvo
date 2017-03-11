@@ -7604,8 +7604,24 @@
                        ==  ==
                    ==
         {$face *}  dext(sut q.sut)
-        {$fork *}  ?.  ?=(?({$atom *} $noun {$cell *} {$core *}) ref)  sint
-                   (lien (~(tap in p.sut)) |=(span dext(tel |, sut +<)))
+        {$fork *}  =|  try/?
+                   |-  ^-  ?
+                   ?.  ?&  try
+                           ?=({$cell *} ref)
+                           (~(all in p.sut) |=(a/span ?=({$cell *} a)))
+                       ==
+                     ?.  ?=(?({$atom *} $noun {$cell *} {$core *}) ref)  sint
+                     (lien (~(tap in p.sut)) |=(span dext(tel |, sut +<)))
+                   =/  sep
+                     %+  roll  (~(tap in p.sut))
+                     |=  {a/span b/(pair (set span) (set span))}
+                     ?>  ?=({$cell *} a)
+                     [(~(put in p.b) p.a) (~(put in q.b) q.a)]
+                   ?:  ?=({* $~ $~} p.sep)
+                     dext(sut [%cell n.p.sep [%fork q.sep]])
+                   ?:  ?=({* $~ $~} q.sep)
+                     dext(sut [%cell [%fork p.sep] n.q.sep])
+                   $(try |)
         {$hold *}  ?:  (~(has in seg) sut)  |
                    ?:  (~(has in gil) [sut ref])  &
                    %=  dext
