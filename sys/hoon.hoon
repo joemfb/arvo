@@ -5589,7 +5589,27 @@
   ~/  %cell
   |=  {hed/span tal/span}
   ^-  span
-  ?:(=(%void hed) %void ?:(=(%void tal) %void [%cell hed tal]))
+  ?:  |(?=($void hed) ?=($void tal))
+    %void
+  ?.  |(?=({$fork *} hed) ?=({$fork *} tal))
+    [%cell hed tal]
+  %-  fork
+  ^-  (list span)
+  ?.  ?=({$fork *} hed)
+    ?>  ?=({$fork *} tal)
+    %+  turn  (~(tap in p.tal))
+    |=(t/span [%cell hed t])
+  ?.  ?=({$fork *} tal)
+    ?>  ?=({$fork *} hed)
+    %+  turn  (~(tap in p.hed))
+    |=(h/span `span`[%cell h tal])
+  ?>  ?=({$fork *} hed)
+  %-  zing
+  %+  turn  (~(tap in p.hed))
+  |=  h/span
+  ?>  ?=({$fork *} tal)
+  %+  turn  (~(tap in p.tal))
+  |=(t/span `span`[%cell h t])
 ::
 ++  core                                                ::  make %core span
   ~/  %core
