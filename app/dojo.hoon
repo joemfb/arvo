@@ -6,6 +6,7 @@
 :: /-  gene  :: XX kind of - this is all handled with axis math rn
 /+  sole                                                ::  console library
 [. sole]
+=,  pubsub:userlib
 =,  space:userlib
 =,  format
 ::                                                      ::  ::
@@ -605,6 +606,7 @@
     ::
     ++  dy-span                                         ::  sole action
       |=  act/sole-action
+      ~&  [% act+act]
       ?-  -.act
         $det  (dy-edit +.act)
         $ret  (dy-done (tufa buf.say))
@@ -852,7 +854,13 @@
   ++  he-diff                                           ::  emit update
     |=  fec/sole-effect
     ^+  +>
-    (he-card %diff %sole-effect fec)
+    =.  log  [fec log]
+    =;  neu/_+>.$  ?>(=(neu(moz ~) +>.$(moz ~)) neu)
+    =/  cad/card  [%diff %sole-effect fec]
+    =/  mos
+      %+  turn  (prey /sole/(encode-id:sole sid) hid)
+      |=({ost/bone ^} [ost cad])
+    +>.$(moz (welp mos moz))
   ::
   ++  he-stop                                           ::  abort work
     ^+  .
@@ -1150,7 +1158,10 @@
     ~&  [%dojo-peer-replaced sid]
     ~(he-abut he ~ sid (~(got by hoc) sid))
   =+  ses=%*(. *session -.dir [our.hid %home ud+0])
-  he-abet:(~(he-peer he moz sid ses) pax)
+  =+  ~(. he moz sid ses)
+  =>  (he-peer:- pax)
+  he-abet
+::   he-abet:(~(he-peer he moz sid ses) pax)
 ::
 ++  poke-sole-action  :: DEPRECATED
   |=  act/sole-action  ^-  (quip move +>)

@@ -21,6 +21,7 @@
         wom/(unit ship)
         admins/(set ship)
     ==
+:: ++  prep  _`.
 ++  abet
   ^-  (quip {bone card} .)
   [(flop mow) .(mow ~)]

@@ -121,8 +121,7 @@
 =*  dev  -
 =>  |%                                                ::  arvo structures
     ++  pear                                          ::  request
-      $%  {$sole-action p/sole-action}                ::
-          {$sole-id-action p/sole-id-action}          ::
+      $%  {$sole-id-action p/sole-id-action}          ::
           {$talk-command command:talk}                ::
       ==                                              ::
     ++  lime                                          ::  update
@@ -186,7 +185,7 @@
   =+  gyl=(drum-phat way)
   ?~  saw
     (se-join gyl)
-  (se-dump:(se-drop & gyl) u.saw)
+  (se-dump:(se-nuke gyl) u.saw)
 ::
 ++  take-coup-phat                                    ::  ack poke
   |=  {way/wire saw/(unit tang)}
@@ -194,7 +193,7 @@
   ?~  saw  +>
   =+  gyl=(drum-phat way)
   ?:  (se-aint gyl)  +>.$
-  %-  se-dump:(se-drop & gyl)
+  %-  se-dump:(se-nuke gyl)
   :_  u.saw
   >[%drum-coup-fail src.hid ost.hid gyl]<
 ::
@@ -216,7 +215,7 @@
   =<  se-abet  =<  se-view
   =+  gyl=(drum-phat way)
   ~&  [%drum-quit src.hid ost.hid gyl]
-  (se-drop %| gyl)
+  (se-drop gyl)
 ::                                                    ::  ::
 ::::                                                  ::  ::
   ::                                                  ::  ::
@@ -337,12 +336,11 @@
   ==
 ::
 ++  se-drop                                           ::  disconnect
-  |=  {pej/? gyl/gill:^gall}
+  |=  gyl/gill:^gall
   ^+  +>
   =+  lag=se-agon
   ?.  (~(has by fug) gyl)  +>.$
   =.  fug  (~(del by fug) gyl)
-  =.  eel  ?.(pej eel (~(del in eel) gyl))
   =.  +>.$  ?.  &(?=(^ lag) !=(gyl u.lag))
               +>.$(inx 0)
             (se-alas u.lag)
@@ -374,7 +372,8 @@
 ++  se-nuke                                           ::  teardown connection
   |=  gyl/gill:^gall
   ^+  +>
-  (se-drop:(se-pull gyl) & gyl)
+  =.  eel  (~(del in eel) gyl)
+  (se-drop:(se-pull gyl) gyl)
 ::
 ++  se-klin                                           ::  disconnect app
   |=  gyl/gill:^gall
@@ -443,7 +442,7 @@
   %-  se-emit(fug (~(put by fug) gyl ~))
   [ost.hid %peer (drum-path gyl) gyl /sole/(encode-id:sole se-sole-id)]
 ::
-++  se-sole-id  `sole-id`[0 our dap]:hid              :: XX multiple?
+++  se-sole-id  `sole-id`[1 our dap]:hid              :: XX multiple?
 ++  se-pull                                           ::  cancel subscription
   |=  gyl/gill:^gall
   (se-emit [ost.hid %pull (drum-path gyl) gyl ~])
@@ -606,6 +605,7 @@
       {$sav *}  +>(..ta (se-blit fec))
       {$txt *}  +>(..ta (se-text p.fec))
       {$url *}  +>(..ta (se-blit fec))
+      {$say *}  +>(say.inp [[own=his his=own]:ven leg=~ buf]:p.fec)
     ==
   ::
   ++  ta-got                                          ::  apply change
@@ -655,6 +655,7 @@
     ^+  +>
     =.  ris  ~
     ?+    key    ta-bel
+      $v  +>(..ta (se-klin our %dojo))
       $dot  ?.  &(?=(^ old.hit) ?=(^ i.old.hit))      ::  last "arg" from hist
               ta-bel
             =+  old=`(list @c)`i.old.hit

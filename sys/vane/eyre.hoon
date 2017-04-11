@@ -52,7 +52,8 @@
               $:  $e                                    ::  by self
           $%  {$thou p/httr}                            ::  response for proxy
               {$mini-jael-gift *}                       :: XX types
-          ==  ==                                        ::
+          ==  ==                
+          ::
               $:  $f                                    ::  by %ford
           $%  {$made p/@uvH q/gage:^ford}                     ::
               {$news p/@uvH}                            ::
@@ -942,6 +943,8 @@
     ::
         $wake
       ?>  ?=($je -.tee)
+      ?.  (~(has by secondary.jel) p.p.tee)
+        ~&(e+weird-wake+p.p.tee +>.$)
       %.(p.tee wake:(je (~(got by secondary.jel) p.p.tee)))
     ::
         $news                                         ::  dependency updated

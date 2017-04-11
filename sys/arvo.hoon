@@ -386,6 +386,7 @@
   ++  kick                                              ::  new main loop
     |=  {lac/? mor/(list muse)}
     =|  ova/(list ovum)
+    !.
     |-  ^-  {p/(list ovum) q/(pair worm (list {p/@tas q/vase}))}
     ?~  mor  [(flop ova) niz]
     =^  nyx  niz  (jack lac i.mor)
