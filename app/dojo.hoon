@@ -606,7 +606,6 @@
     ::
     ++  dy-span                                         ::  sole action
       |=  act/sole-action
-      ~&  [% act+act]
       ?-  -.act
         $det  (dy-edit +.act)
         $ret  (dy-done (tufa buf.say))
