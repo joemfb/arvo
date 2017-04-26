@@ -45,7 +45,7 @@
   ~|  pax=a
   =^  ses  a  ?~(a !! [(decode-id i.a) t.a])
   =/  num  (raid a /[%ud])
-  ~&  ask-serv+peer+a
+  ~?  verbose  ask+serv+peer+a
   (peer-inc:(di ses) num)
 ::
 ++  poke-inc-cmd
@@ -101,6 +101,7 @@
   (peer-old:(di sid) pax)
 ::
 ++  new-di  |=(sid/sole-id =.(sos (~(put by sos) sid *sole-share ~) (di sid)))
+++  verbose  |
 ++  di
   |=  sid/sole-id
   =|  sef/(list sole-effect)
@@ -134,10 +135,10 @@
   ++  inc-bump
     ^+  this
     =/  num  (lent log)
-    ~&  serv+[%bump sid num=num log=log]
+    ~?  verbose  ask+serv+[%bump sid num=num log=log]
     =.  num  +(num)
     =.  log  [txt+"bump: {<num>}" log]
-    ~&  broadcasting+(prey /inc/(encode-id sid) +<-.di)
+    ~?  verbose  ask+broadcasting+(prey /inc/(encode-id sid) +<-.di)
     %+  roll  (prey /inc/(encode-id sid) +<-.di)
     |:  [[ost=*bone *^] this]
     (emit ost %diff %atom num)
@@ -145,8 +146,8 @@
   ++  inc-drop
     ^+  this
     =/  num  (lent log)
-    ~&  serv+[%drop sid num=num log=log]
-    ~&  dropping+(prey /inc/(encode-id sid) +<-.di)
+    ~?  verbose  ask+serv+[%drop sid num=num log=log]
+    ~?  verbose  ask+dropping+(prey /inc/(encode-id sid) +<-.di)
     %+  roll  (prey /inc/(encode-id sid) +<-.di)
     |:  [[ost=*bone *^] this]
     (emit ost %quit ~)
