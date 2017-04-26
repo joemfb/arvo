@@ -22,11 +22,8 @@
         admins/(set ship)
     ==
 :: ++  prep  _`.
-++  abet
-  ^-  (quip {bone card} .)
-  [(flop mow) .(mow ~)]
-::
-++  emit  |=(a/card +>(mow [[ost.bow a] mow]))
+++  abet  [(flop mow) .(mow ~)]
+++  emit  |=(a/{bone card} +>(mow [a mow]))
 ++  spam-effect
   |=  a/sole-effect  ^+  +>
   %+  roll  (~(tap by sos))
@@ -95,7 +92,7 @@
     |=({ost/bone ^} [ost cad])
   ::
   ::
-  ++  emit  |=(a/card +>(..di (^emit a)))
+  ++  emit  |=(a/{bone card} +>(..di (^emit a)))
   ++  give-effect  |=(a/sole-effect +>(sef [a sef], log [a log]))
   ++  effect  |=(fec/sole-effect [%diff %sole-effect fec])
   ::
@@ -168,7 +165,7 @@
         =/  new  new-adrs
         ?~  new  (give-effect bel+~)
         =.  inv.i.new  %sent  :: XX pending
-        =.  emit  (emit (invite ask.i.new))
+        =.  emit  (emit ost.bow (invite ask.i.new))
         =.  adr  (~(put by adr) ask.i.new [tym inv]:i.new)
         (give-effect %mor tan+[(message i.new)]~ pro+prompt ~)
       (give-effect bel+~)
@@ -186,7 +183,7 @@
     ~&  ole+(lent log)
     =.  log  (skip log |=(a/sole-effect ?=($det -.a)))  :: XX sync sole-share properly
     =.  som  *sole-share                                :: XX sync sole-share properly
-    (emit (effect %mor (flop log)))
+    (emit ost.bow (effect %mor (flop log)))
   --
 ::
 ++  prompt
