@@ -226,7 +226,6 @@
   ::      eel  (deft-fish our)
   ::      ray  (deft-apps our)
   ::    ==
-  :*  %drum
   |=  our/ship
   ^-  drum-part
   :*  %drum
@@ -784,7 +783,7 @@
   ::
   |=  lin/(pair @ud stub:^dill)
   ^+  +>
-  =.  off  ?:((lth p.lin edg) -1 (sub p.lin edg))
+  =.  off  ?:((lth p.lin edg) 0 (sub p.lin edg))
   (se-show (sub p.lin off) (scag:klr edg (slag:klr off q.lin)))
 ::
 ++  se-view                                             ::< flush buffer
@@ -897,7 +896,7 @@
   ::+|
   ::
   ++  ta-join
-    < ::> on succesful {new} session connection,
+    ::> on succesful {new} session connection,
     ::> display [linked] message
     ::
     ?>  new
