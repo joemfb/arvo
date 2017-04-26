@@ -13,7 +13,7 @@
 ::::  6a: arvo core
   ::
 ++  mean  |=(a/tang (fear (flop a) |.(!!)))             ::  deify stack trace
-++  fear                                                ::  insert user mean
+++  fear  !.                                            ::  insert user mean
   |*  {a/tang _|?(**)}
   ^+  (+<+)
   =>  .(a `tang`a)
