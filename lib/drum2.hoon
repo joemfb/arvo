@@ -540,7 +540,7 @@
 ++  se-adze                                             ::< add new connections
   ::> connect any desired-link that is not connected
   ::>
-  ::> (apps in {ell} not in {fug})
+  ::> (apps in {eel} not in {fug})
   ::
   ^+  .
   %+  roll  (~(tap in eel))
