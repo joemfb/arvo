@@ -167,7 +167,7 @@
 ++  session  {@u dock}                                  ::< always [0 our dap]
 ++  ses-data                                            ::> WIP, RENAMEME
   ::> sus: seqn of current outbound subscription
-  ::> rec: counter of recieved bumps
+  ::> rec: counter of received bumps
   ::
   {sus/@u rec/@u}
 ::
@@ -439,7 +439,7 @@
   se-abet:(se-blit-sys [%sav pax txt])
 ::
 ++  reap-phat                                           ::< get ack for connection
-  ::> recieve acknowledgment on an app connection
+  ::> receive acknowledgment on an app connection
   ::>
   ::> way: identifies the app being connected to,
   ::>      encoded as /[%p]/[%tas]
@@ -453,7 +453,7 @@
   (se-dump:(se-nuke dok) u.saw)
 ::
 ++  take-coup-phat                                      ::< get ack for poke
-  ::> recieve acknowledgment on an app command
+  ::> receive acknowledgment on an app command
   ::>
   ::> way: identifies the app being commanded,
   ::>      encoded as /[%p]/[%tas]
@@ -470,7 +470,7 @@
   >[%drum-coup-fail src.bow ost.bow dok]<
 ::
 ++  take-onto                                           ::< get ack for start
-  ::> recieve acknowledgment on an app being started
+  ::> receive acknowledgment on an app being started
   ::>
   ::> way: identifies the app being started,
   ::>      encoded as /[%p]/[%tas]
@@ -606,7 +606,7 @@
   |(?=($~ gyr) !=(%liv con.u.gyr))
 ::
 ++  se-amor                                             ::< live targets
-  ::> list apps which are succesfully connected
+  ::> list apps which are successfully connected
   ::
   ^-  (list dock)
   %+  skim  (~(tap in eel))
@@ -848,7 +848,7 @@
   ::+|
   ::
   ++  ta-peered                                         ::< subscription ack
-    ::> on succesful session {con}nection,
+    ::> on successful session {con}nection,
     ::> display "[linked]" message
     ::
     ?<  =(%liv con)
@@ -961,7 +961,7 @@
   ::
   ++  ta-send-edit                                      ::< send edit
     ::> capture context for sole edit, and send it to
-    ::> {dok} 
+    ::> {dok}
     ::
     |=  ted/sole-edit
     ^+  +>
@@ -1270,7 +1270,7 @@
     ==
   ::
   ++  ta-pro                                            ::< set prompt
-    ::> recieve prompt, inserting ship and app title
+    ::> receive prompt, inserting ship and app title
     ::
     |=  pom/sole-prompt
     %_    +>
@@ -1324,7 +1324,7 @@
   ::
   ++  ta-vew                                            ::< computed prompt
     ::> active i-search or app prompt, followed by
-    ::> input text if visible or hash if typing in a 
+    ::> input text if visible or hash if typing in a
     ::> password etc
     ::
     ^-  (pair @ud stub:^dill)
