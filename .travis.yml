@@ -1,6 +1,8 @@
 language: node_js # ish, mainly used as an entry point
 node_js:
   - 4
+env:
+  - ASAN_OPTIONS=protect_shadow_gap=false
 before_install:
   - cd .travis # keep main directory clear
   - >
@@ -8,7 +10,7 @@ before_install:
       chmod +x ./urbit;
       echo "FIXME downloaded raw urbit binary releaseinstead of .deb";
       echo "FIXME used full pinned url instead of tag name"
-      
+
 before_script: bash get-or-build-pill.sh
 
 # https://github.com/travis-ci/travis-ci/issues/2570
