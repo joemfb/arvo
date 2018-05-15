@@ -1227,6 +1227,7 @@
         $wait  `%b
         $want  `%a
         $warp  `%c
+        $well  `%e
         $wipe  `%f                                      ::  XX cache clear
       ==
     --

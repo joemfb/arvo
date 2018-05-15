@@ -682,6 +682,7 @@
           [%this p=? q=clip r=httq]                     ::  inbound request
           [%thud ~]                                     ::  inbound cancel
           [%wegh ~]                                     ::  report memory
+          [%well p=path q=(unit mime)]                  ::  put/del .well-known
           [%went p=sack q=path r=@ud s=coop]            ::  response confirm
           [%west p=sack q=[path *]]                     ::  network request
       ==                                                ::
