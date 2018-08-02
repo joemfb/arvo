@@ -1113,7 +1113,9 @@
       ::
       ::  if new, first dif must be %full
       ::
-      ?>  |((~(has by hul.eth) who) ?=(%full -.dif))
+      ::  XX temporarily (?) disabled
+      ~?  |((~(has by hul.eth) who) ?=(%full -.dif))
+        [%jael-not-full who dif]
       ::
       ::  sanity checks, should never fail if we operate correctly
       ::
