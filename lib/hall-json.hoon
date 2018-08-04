@@ -496,6 +496,8 @@
   ::
   ++  crow                                              ::>  crowd
     ^-  $-(json (unit crowd))
+    :: XX the +op hall is crashing here with find.+2.$
+    ::
     (ot loc+grop rem+(op circ:de-tape grop) ~)
   ::
   ++  grop                                              ::>  group
