@@ -693,7 +693,8 @@
       ?>  !=(~ mac)
       ?>  ?=(^ wil)
       ::  ?>  =(our r.p.q.i.wil)
-      ?>  =(wil (grip wil ~))
+      :: XX revisit and re-enable
+      :: ?>  =(wil (grip wil ~))
       ?>  (real mac wil)
       %_    ton
           fak  r.i.wil
@@ -942,19 +943,81 @@
   |%
   ++  am                                                ::    am
     |_  [now=@da fox=fort]                              ::  protocol engine
-    ++  boot                                            ::    boot:am
-      ^-  fort                                          ::  restore from noun
-      %=    fox
-          urb.ton
-        %-  ~(gas by *(map ship sufi))
-        %+  turn
-          ~(tap by urb.ton.fox)
-        |=  [p=ship q=sufi]  ^-  [p=ship q=sufi]
-        :-  p
-        %=    q
-            val
-          (turn val.q |=([p=life q=ring r=acru] [p q (nol:nu:crub:crypto q)]))
-        ==
+    :: +init: initialize identity and keys
+    ::
+    ::  XX route all initialization thru here
+    ::
+    ++  init
+      =>  |%
+          :: +seed: identity parameters
+          ::
+          ::   XX add hierarchical key derivations
+          ::
+          +=  seed
+            $%  :: generator a la +pope
+                ::
+                [%gene our=ship gen=@uw]
+                :: direct from private keys
+                ::
+                [%ring our=ship key=@ux]
+                :: mine a comet under a star
+                ::
+                [%come tar=ship eny=@uvJ]
+            ==
+          :: +gens: default language, class, and title
+          ::
+          ++  gens
+            |=  our=ship
+            ^-  ^gens
+            :-  %en
+            ?-  (clan:title our)
+              %czar  [%czar ~]
+              %duke  [%duke %anon ~]
+              %earl  [%earl (scot %p our)]
+              %king  [%king (scot %p our)]
+              %pawn  [%pawn ~]
+            ==
+          :: +buck: our secrets
+          ::
+          ++  buck
+            |=  [our=ship cub=acru fak=?]
+            ^-  ^buck
+            =/  sep=step  [`bray`[1 ~ our now] (gens our) pub:ex:cub]
+            =/  ded=deyd  [(sign:as:cub *@ (shaf %self (sham sep))) sep fak]
+            [`mace`[[1 sec:ex:cub] ~] [ded ~]]
+          --
+      ::
+      |=  [sed=seed fak=?]
+      ^-  [p=(list boon) q=fort]
+      =+  ^-  [our=ship cub=acru]
+          ?-  -.sed
+              %gene
+            :-  our.sed
+            :: (pit:nu:crub:crypto 512 ?:(fak our.sed gen.sed))
+            (pit:nu:crub:crypto 512 gen.sed)
+          ::
+              %ring
+            ~|  %fake-no-secrets
+            ?>  !fak
+            :-  our.sed
+            (nol:nu:crub:crypto key.sed)
+          ::
+              %come
+            ~|  [%come-not-king tar.sed]
+            ?>  ?=(%king (clan:title tar.sed))
+            |-  ^-  [our=ship cub=acru]
+            =/  cub=acru  (pit:nu:crub:crypto 512 eny.sed)
+            =/  our=ship  `@`fig:ex:cub
+            :: ?:  =(tar.sed (sein:title our))
+            ?:  =(tar.sed (end 4 1 our))
+              [our cub]
+            $(eny.sed +(eny.sed))
+          ==
+      ~&  [%ames-init our pub:ex:cub]
+      :-  [%beer our pac:ex:cub]~
+      %_  fox
+        ton  (~(ha go ton.fox) our (buck our cub fak))
+        fak.ton  fak
       ==
     ++  come                                            ::    come:am
       |=  [ges=(unit @t) wid=@ bur=@ fak=?]            ::  instantiate pawn
@@ -977,23 +1040,8 @@
     ++  czar  !:                                        ::    czar:am
       |=  [our=ship ger=@uw fak=?]                      ::  instantiate emperor
       ^-  [p=(list boon) q=fort]
-      =+  ^=  loy
-          ?:  fak
-            ::  fake uses carrier number as seed
-            ::
-            (pit:nu:crub:crypto 512 our)
-          (pit:nu:crub:crypto 512 ger)
-      =+  fim==(fig:ex:loy (zeno our))
-      ?:  &(!fak !fim)  !!                              ::  not fake & bad fig
-      =+  mac=`mace`[[0 sec:ex:loy] ~]
-      =+  syp=`step`[`bray`[0 ~ our now] [%en %czar ~] pub:ex:loy]
-      =+  ded=`deyd`[(sign:as:loy *@ (shaf %self (sham syp))) syp fak]
-      =+  buq=`buck`[mac [ded ~]]
-      =:  ton.fox  (~(ha go ton.fox) our buq)
-          zac.fox  (~(put by zac.fox) our *corn)
-          fak.ton.fox  fak
-        ==
-      [[[%beer our pac:ex:loy] ~] fox]
+      :: XX remove indirection
+      (init [%gene our ger] fak)
     ::
     ++  gnaw                                            ::    gnaw:am
       |=  [kay=cape ryn=lane pac=rock]                  ::  process packet
