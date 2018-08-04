@@ -457,10 +457,15 @@
         ::
         ++  clon
           ^-  life
-          ?~(lew.wod.dur 0 p.p.q.i.lew.wod.dur)
+          :: XX default life of 1?
+          ::
+          ?~(lew.wod.dur 1 p.p.q.i.lew.wod.dur)
         ::
         ++  deng
           |=  law=wyll
+          ?.  ?=(?(%earl %pawn) (clan:title our))
+            ~|  %unexpected-will
+            ?>(?=(~ law) +>)
           %_(+> lew.wod.dur (grip law lew.wod.dur))
         ::
         ++  griz                                        ::    griz:lax:as:go
@@ -613,10 +618,12 @@
             =^  tuy  +>.$
               ?:(=(~ lew.wod.dur) [*code +>.$] (griz now))
             :_  ..wisp
-            =+  yig=sen
-            ::  =+  bil=`wyll`(pare wyl.dur law.saf)    ::  XX not set
-            =+  bil=law.saf                             ::  XX send whole wyll
-            =+  hom=(jam ham)
+            =/  bil=wyll
+              ?.  ?=(?(%earl %pawn) (clan:title our))
+                ~
+              law.saf
+            =/  yig  sen
+            =/  hom  (jam ham)
             ?:  =(~ lew.wod.dur)
               :-  %open
               %^    jam
@@ -1232,6 +1239,15 @@
             |%
             ++  apse
               ^+  +>.$
+              :: if we don't have a public key for :her,
+              :: request keys and drop the packet
+              ::
+              ?:  ?&  =(~ lew.wod.dur.diz)
+                      !?=(?(%earl %pawn) (clan:title her))
+                  ==
+                =.  bin  :_(bin [%bock our her])
+                ~&  [%chew-no-will %drop her]
+                +>.$
               =+  oub=bust:puz
               =+  neg==(~ yed.caq.dur.diz)
               =.  +>.$  east
@@ -1465,6 +1481,10 @@
           =/  rol=rill  (fall (~(get by ryl.bah) cha) *rill)
           =/  sex=@ud  sed.rol
           ::  ~&  [%tx [our her] cha sex]
+          :: if we don't have a public key for her,
+          :: request keys and proceed (skin will be %open)
+          ::
+          =?  bin  =(~ lew.wod.dur.diz)  :_(bin [%bock our her])
           =.  ryl.bah
               %+  ~(put by ryl.bah)  cha
               %=  rol
@@ -1642,8 +1662,14 @@
           [hen [%slip %e %init p.bon]]
           [hen [%slip %g %init p.bon]]
           [hen [%slip %d %init p.bon]]                  ::  must be after gall
+          [hen [%pass /init-jael/(scot %p p.bon) %b %wait +(now)]]
           ~
       ==
+    ::
+        %bock
+      =/  wir=wire
+        /our/(scot %p p.p.bon)/her/(scot %p q.p.bon)/now/(scot %da now)
+      :_  fox  [hen [%pass wir %j %pubs p.p.bon q.p.bon]]~
     ::
         %cake
       ::  ~?  ?=(^ r.bon)  [%cake-woot-bad hen r.bon]
@@ -1687,6 +1713,38 @@
                $(sih [%g %mean `[%mack +>+.sih]])
         %unto  [~ +>]
         %woot  [~ +>]
+    ::
+        %pubs
+      ?.  ?=([%our @ %her @ %now @ ~] tea)
+        ~&  [%strange-pubs tea]
+        [~ +>]
+      ~&  [tea sih]
+      =/  our=ship  (slav %p i.t.tea)
+      =/  her=ship  (slav %p i.t.t.t.tea)
+      =/  now=@da   (slav %da i.t.t.t.t.t.tea)
+      =/  gus  (need (~(us go ton.fox) our))
+      =/  diz  (myx:gus her)
+      :: XX extend?
+      :: ?>  =(~ lew.wod.dur.diz)
+      =.  lew.wod.dur.diz
+        ^-  wyll
+        %+  turn
+          %+  sort
+            ~(tap by p.sih)
+          |=([[a=life *] [b=life *]] (gth a b))
+        |=  [lyf=life kes=kest:pki:jael]
+        ^-  deyd
+        ?>  ?=(%1 sut.kes)
+        =/  pub=pass  (cat 3 'b' (cat 8 aut.kes enc.kes))
+        =/  sep=step  [`bray`[lyf ~ her now] (gens:init:am her) pub]
+        [*@ux sep fak.ton.fox]
+      ~&  ?.  ?=(^ lew.wod.dur.diz)
+            %ames-no-will
+          [%ames-will her r.q.i.lew.wod.dur.diz]
+      =.  ton.fox  (~(su go ton.fox) (nux:gus diz))
+      :: XX kick or something?
+      [~ +>.$]
+    ::
         ?(%mean %nice)                                  ::  XX obsolete
       ?:  ?=([%ye ~] tea)
         [~ +>.$]
@@ -1705,6 +1763,13 @@
         [(flop out) +>.^$]
       =^  toe  fox  (clop now hen i.p.fuy)
       $(p.fuy t.p.fuy, out (weld (flop toe) out))
+      ::
+        %wake
+      ?.  ?=([%init-jael @ ~] tea)
+        ~&  [%ames-strange-wake tea]
+        [~ +>]
+      =/  our=ship  (slav %p i.t.tea)
+      [[[hen [%slip %j %init our]] ~] +>.$]
     ==
   ::
   ++  knob
@@ -1832,7 +1897,9 @@
       ``[%noun !>(pals:(~(um am [now fox]) our))]
     ?.  ?=([%life ~] tyl)
       =+  muc=$(tyl [%life ~])
-      (perm our his ?~(muc 0 (@ud u.muc)) tyl)
+      :: XX default life of 1?
+      ::
+      (perm our his ?~(muc 1 (@ud u.muc)) tyl)
     =+  gys=(~(us go ton.fox) our)
     ?~  gys  ~
     ?.  =(our his)

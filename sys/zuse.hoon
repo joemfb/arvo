@@ -393,6 +393,12 @@
           $:  $a                                        ::  to %ames
       $%  {$kick p/@da}                                 ::
       ==  ==                                            ::
+          $:  %b                                        ::  to %behn
+      $%  [%wait p=@da]                                 ::  wait until
+      ==  ==                                            ::
+          $:  %j                                        ::  to %jael
+      $%  [%pubs our=ship who=ship]                     ::  view public keys
+      ==  ==                                            ::
           $:  $g                                        ::  to %gall
       $%  {$deal p/sock q/cush:gall}                    ::
       ==  ==                                            ::
@@ -409,7 +415,13 @@
           {$woot p/ship q/coop}                         ::  reaction message
       ==                                                ::
     ++  sign                                            ::  in result _<-
-      $%  $:  $g                                        ::  from %gall
+      $%  $:  %b                                        ::  from %behn
+      $%  [%wake ~]                                     ::  wake up
+      ==  ==                                            ::
+          $:  %j                                        ::  from %jael
+      $%  [%pubs p=kist:pki:jael]                       ::  public keys
+      ==  ==                                            ::
+          $:  $g                                        ::  from %gall
       $%  {$unto p/cuft:gall}                           ::
           {$mean p/ares}                                ::  XX old clean up
           {$nice $~}                                    ::
@@ -472,6 +484,7 @@
     ==                                                  ::
   ++  boon                                              ::  fort output
     $%  {$beer p/ship q/@uvG}                           ::  gained ownership
+        {$bock p/sock}                                  ::  request public keys
         {$cake p/sock q/soap r/coop s/duct}             ::  e2e message result
         {$mead p/lane q/rock}                           ::  accept packet
         {$milk p/sock q/soap r/*}                       ::  e2e pass message
