@@ -460,13 +460,21 @@
           :: XX default life of 1?
           ::
           ?~(lew.wod.dur 1 p.p.q.i.lew.wod.dur)
+        :: +deng: accept new or updated will from packet
         ::
         ++  deng
           |=  law=wyll
-          ?.  ?=(?(%earl %pawn) (clan:title our))
+          ?.  ?|  ?=(?(%earl %pawn) (clan:title our))
+                  =(her (sein:title our))
+              ==
             ~|  %unexpected-will
             ?>(?=(~ law) +>)
-          %_(+> lew.wod.dur (grip law lew.wod.dur))
+          ?:  =(~ law)
+            +>
+          ~&  [%deng-learn law]
+          :: XX validate?
+          :: %_(+> lew.wod.dur (grip law lew.wod.dur))
+          %_(+> lew.wod.dur law)
         ::
         ++  griz                                        ::    griz:lax:as:go
           |=  now=@da                                   ::  generate key for
@@ -619,7 +627,10 @@
               ?:(=(~ lew.wod.dur) [*code +>.$] (griz now))
             :_  ..wisp
             =/  bil=wyll
-              ?.  ?=(?(%earl %pawn) (clan:title our))
+              ?.  ?|  ?=(?(%earl %pawn) (clan:title our))
+                      ?&  =(our (sein:title her))
+                          !=(our her)
+                  ==  ==
                 ~
               law.saf
             =/  yig  sen
@@ -1240,12 +1251,19 @@
             ++  apse
               ^+  +>.$
               :: if we don't have a public key for :her,
-              :: request keys and drop the packet
+              :: (and :her is not a moon or comet) request keys
+              :: and, if :her is not our sponsor, drop the packet
               ::
+              =?  bin  ?&  =(~ lew.wod.dur.diz)
+                           !?=(?(%earl %pawn) (clan:title her))
+                       ==
+                :_(bin [%bock our her])
               ?:  ?&  =(~ lew.wod.dur.diz)
                       !?=(?(%earl %pawn) (clan:title her))
+                      !=(her (sein:title our))
+                      :: XX check on self-communication
+                      !=(her our)
                   ==
-                =.  bin  :_(bin [%bock our her])
                 ~&  [%chew-no-will %drop her]
                 +>.$
               =+  oub=bust:puz
