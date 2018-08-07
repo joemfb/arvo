@@ -1718,7 +1718,10 @@
       ?.  ?=([%our @ %her @ %now @ ~] tea)
         ~&  [%strange-pubs tea]
         [~ +>]
-      ~&  [tea sih]
+      ?:  =(~ p.sih)
+        ~&  [%hear-no-pubs tea]
+        [~ +>]
+      ~&  [%hear-pubs tea sih]
       =/  our=ship  (slav %p i.t.tea)
       =/  her=ship  (slav %p i.t.t.t.tea)
       =/  now=@da   (slav %da i.t.t.t.t.t.tea)
