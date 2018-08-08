@@ -4947,7 +4947,7 @@
       $king  (end 3 1 who)
       $duke  (end 4 1 who)
       $earl  (end 5 1 who)
-      $pawn  ~zod
+      $pawn  (end 4 1 who)
     ==
   ::                                                    ::  ++team:title
   ++  team                                              ::  our / our moon

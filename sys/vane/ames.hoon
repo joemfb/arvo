@@ -1026,8 +1026,7 @@
             |-  ^-  [our=ship cub=acru]
             =/  cub=acru  (pit:nu:crub:crypto 512 eny.sed)
             =/  our=ship  `@`fig:ex:cub
-            :: ?:  =(tar.sed (sein:title our))
-            ?:  =(tar.sed (end 4 1 our))
+            ?:  =(tar.sed (sein:title our))
               [our cub]
             $(eny.sed +(eny.sed))
           ==
