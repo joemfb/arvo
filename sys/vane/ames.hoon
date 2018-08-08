@@ -464,7 +464,7 @@
         ::
         ++  deng
           |=  law=wyll
-          ?.  ?|  ?=(?(%earl %pawn) (clan:title our))
+          ?.  ?|  ?=(?(%earl %pawn) (clan:title her))
                   =(her (sein:title our))
               ==
             ~|  %unexpected-will
@@ -1038,21 +1038,9 @@
       ==
     ++  come                                            ::    come:am
       |=  [ges=(unit @t) wid=@ bur=@ fak=?]            ::  instantiate pawn
-      ^-  [p=[p=ship q=@uvG] q=fort]
-      =+  loy=(pit:nu:crub:crypto wid bur)
-      =+  rig=sec:ex:loy
-      =+  our=`@p`fig:ex:loy
-      =+  syp=[[0 ~ our now] [%en %pawn ges] pub:ex:loy]
-      :-  [our pac:ex:loy]
-      %_    fox
-          ton
-        %^    ~(ha go ton.fox)
-            our
-          `mace`[[0 rig] ~]
-        `wyll`[[(sign:as:loy *@ (shaf %self (sham syp))) syp fak] ~]
-          fak.ton
-        fak
-      ==
+      ^-  [p=(list boon) q=fort]
+      :: XX remove indirection and hardcoded star
+      (init [%come ~marzod bur] fak)
     ::
     ++  czar  !:                                        ::    czar:am
       |=  [our=ship ger=@uw fak=?]                      ::  instantiate emperor
@@ -1839,8 +1827,7 @@
           (~(kick am [now fox(hop p.kyz)]) hen)
         ::
             %make
-          =+  vun=(~(come am [now fox]) p.kyz (bex q.kyz) r.kyz s.kyz)
-          [[[%beer p.vun] ~] q.vun]
+          (~(come am [now fox]) p.kyz (bex q.kyz) r.kyz s.kyz)
         ::
             %sith
           (~(czar am [now fox]) p.kyz q.kyz r.kyz)
