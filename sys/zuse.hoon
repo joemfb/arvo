@@ -486,6 +486,7 @@
     $%  {$beer p/ship q/@uvG}                           ::  gained ownership
         {$bock p/sock}                                  ::  request public keys
         {$cake p/sock q/soap r/coop s/duct}             ::  e2e message result
+        {$curd p/sock q/wyll}                           ::  lunar upgrade
         {$mead p/lane q/rock}                           ::  accept packet
         {$milk p/sock q/soap r/*}                       ::  e2e pass message
         {$ouzo p/lane q/rock}                           ::  transmit packet
