@@ -1289,32 +1289,36 @@
               ^+  +>.$
               =/  rac  (clan:title her)
               =/  seg  (sein:title her)
+              :: unfamilar on-chain ship
+              ::
+              =/  new-sip=?
+                ?&  =(~ lew.wod.dur.diz)
+                    !?=(?(%earl %pawn) rac)
+                ==
+              :: moon of unfamiliar on-chain ship
+              =/  new-mon=?
+                ?&  =(~ lew.wod.dur.diz)
+                    ?=(%earl rac)
+                    !=(our seg)
+                    =/  fod  (~(get by hoc.saf.gus) seg)
+                    ?|  ?=(~ fod)
+                        ?=(~ lew.wod.u.fod)
+                ==  ==
               :: request keys for parent of unfamiliar moon
               ::
-              =?  +>.$  ?&  =(~ lew.wod.dur.diz)
-                            ?=(%earl rac)
-                            !=(our seg)
-                            =/  fod  (~(get by hoc.saf.gus) seg)
-                            ?|  ?=(~ fod)
-                                ?=(~ lew.wod.u.fod)
-                        ==  ==
-                (emit %bock our seg)
+              =?  +>.$  new-mon  (emit %bock our seg)
               :: request keys for unfamiliar on-chain ship
               ::
-              =?  +>.$  ?&  =(~ lew.wod.dur.diz)
-                             !?=(?(%earl %pawn) rac)
-                         ==
-                (emit %bock our her)
-              :: if we don't have keys and :her is not a comet, our moon,
-              :: or our sponsor (TOFU), drop the packet
+              =?  +>.$  new-sip  (emit %bock our her)
+              :: Note: we TOFU our sponsor
               ::
+              :: XX TOFU full saxo chain?
               :: XX check on self-communication
               ::
-              ?:  ?&  =(~ lew.wod.dur.diz)
-                  ?!  ?|  ?=(%pawn rac)
-                          &(?=(%earl rac) =(our seg))
-                          =(her (sein:title our))
-                  ==  ==
+
+              ?:  ?&  |(new-mon new-sip)
+                      !=(her (sein:title our))
+                  ==
                 ~&  [%chew-no-will %drop her]
                 +>.$
               =/  oub  bust:puz
