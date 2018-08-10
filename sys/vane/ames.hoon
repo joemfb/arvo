@@ -1269,40 +1269,34 @@
             |%
             ++  apse
               ^+  +>.$
-              =/  rac  (clan:title her)
-              =/  seg  (sein:title her)
-              :: unfamilar on-chain ship
-              ::
-              =/  new-sip=?
-                ?&  =(~ lew.wod.dur.diz)
-                    !?=(?(%earl %pawn) rac)
-                ==
-              :: moon of unfamiliar on-chain ship
-              =/  new-mon=?
-                ?&  =(~ lew.wod.dur.diz)
-                    ?=(%earl rac)
-                    !=(our seg)
-                    =/  fod  (~(get by hoc.saf.gus) seg)
-                    ?|  ?=(~ fod)
-                        ?=(~ lew.wod.u.fod)
-                ==  ==
-              :: request keys for parent of unfamiliar moon
-              ::
-              =?  +>.$  new-mon  (emit %bock our seg)
-              :: request keys for unfamiliar on-chain ship
-              ::
-              =?  +>.$  new-sip  (emit %bock our her)
-              :: Note: we TOFU our sponsor
+              :: request keys and continue processing packet if
+              :: :her is our initial sponsor (TOFU)
               ::
               :: XX TOFU full saxo chain?
-              :: XX check on self-communication
+              :: XX ensure initial?
               ::
-
-              ?:  ?&  |(new-mon new-sip)
+              =?  +>.$  ?&  =(~ lew.wod.dur.diz)
+                            =(her (sein:title our))
+                        ==
+                (emit %bock our her)
+              :: request keys and drop packet if :her is not a comet,
+              :: an unfamilar on-chain ship (and not our initial sponsor),
+              :: or the moon of unfamiliar on-chain ship
+              ::
+              :: XX ensure initial?
+              ::
+              =/  rac  (clan:title her)
+              =/  seg  (sein:title her)
+              ?:  ?&  =(~ lew.wod.dur.diz)
                       !=(her (sein:title our))
-                  ==
+                      ?|  !?=(?(%earl %pawn) rac)
+                          ?&  ?=(%earl rac)
+                              =/  fod  (~(get by hoc.saf.gus) seg)
+                              ?|  ?=(~ fod)
+                                  ?=(~ lew.wod.u.fod)
+                  ==  ==  ==  ==
                 ~&  [%chew-no-will %drop her]
-                +>.$
+                (emit %bock our ?:(?=(%earl rac) seg her))
               =/  oub  bust:puz
               =/  neg  =(~ yed.caq.dur.diz)
               =.  +>.$  east
