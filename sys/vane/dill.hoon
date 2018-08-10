@@ -35,7 +35,8 @@
   ==                                                    ::
 ++  move  {p/duct q/(wind note gift:able)}              ::  local move
 ++  note-ames                                           ::  weird ames move
-  $%  {$make p/(unit @t) q/@ud r/@ s/?}                 ::
+  $%  {$dawn p/seed:ames q/?}                           ::  boot [params fake?]
+      {$make p/(unit @t) q/@ud r/@ s/?}                 ::
       {$sith p/@p q/@uw r/?}                            ::
       {$wegh $~}                                        ::
   ==                                                    ::

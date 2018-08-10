@@ -1009,21 +1009,6 @@
     ::
     ++  init
       =>  |%
-          :: +seed: identity parameters
-          ::
-          ::   XX add hierarchical key derivations
-          ::
-          +=  seed
-            $%  :: generator a la +pope
-                ::
-                [%gene our=ship gen=@uw]
-                :: direct from private keys
-                ::
-                [%ring our=ship key=@ux]
-                :: mine a comet under a star
-                ::
-                [%come tar=ship eny=@uvJ]
-            ==
           :: +gens: default language, class, and title
           ::
           ++  gens
@@ -1040,42 +1025,65 @@
           :: +buck: our secrets
           ::
           ++  buck
-            |=  [our=ship cub=acru fak=?]
+            |=  [our=ship lyf=life cub=acru fak=?]
             ^-  ^buck
-            =/  sep=step  [`bray`[1 ~ our now] (gens our) pub:ex:cub]
+            =/  sep=step  [`bray`[lyf ~ our now] (gens our) pub:ex:cub]
             =/  ded=deyd  [(sign:as:cub *@ (shaf %self (sham sep))) sep fak]
-            [`mace`[[1 sec:ex:cub] ~] [ded ~]]
+            [`mace`[[lyf sec:ex:cub] ~] [ded ~]]
           --
       ::
       |=  [sed=seed fak=?]
       ^-  [p=(list boon) q=fort]
-      =+  ^-  [our=ship cub=acru]
+      =+  ^-  [our=ship cub=acru buq=^buck]
           ?-  -.sed
-              %gene
-            :-  our.sed
-            :: (pit:nu:crub:crypto 512 ?:(fak our.sed gen.sed))
-            (pit:nu:crub:crypto 512 gen.sed)
-          ::
-              %ring
-            ~|  %fake-no-secrets
-            ?>  !fak
-            :-  our.sed
-            (nol:nu:crub:crypto key.sed)
-          ::
               %come
             ~|  [%come-not-king tar.sed]
             ?>  ?=(%king (clan:title tar.sed))
-            |-  ^-  [our=ship cub=acru]
+            |-  ^-  [our=ship cub=acru buq=^buck]
             =/  cub=acru  (pit:nu:crub:crypto 512 eny.sed)
             =/  our=ship  `@`fig:ex:cub
             ?:  =(tar.sed (sein:title our))
-              [our cub]
+              [our cub (buck our `life`1 cub fak)]
             $(eny.sed +(eny.sed))
+          ::
+              %gene
+            =/  cub=acru
+              :: XX fak wat do?
+              :: (pit:nu:crub:crypto 512 ?:(fak our.sed gen.sed))
+              (pit:nu:crub:crypto 512 gen.sed)
+            [our.sed cub (buck our.sed lyf.sed cub fak)]
+          ::
+              %moon
+            ?.  ?=(%earl (clan:title our.sed))
+              ~|(%moon-not-moon !!)
+            :: XX fak wat do?
+            ?:  fak
+              ~|(%fake-no-moon !!)
+            ?.  =(lyf.sed p.p.sep.sed)
+              ~|(%moon-life-mismatch !!)
+            =/  cub=acru  (nol:nu:crub:crypto key.sed)
+            :+  our.sed
+              cub
+            =/  ded=deyd  [sig.sed sep.sed fak]
+            [`mace`[[lyf.sed sec:ex:cub] ~] [ded ~]]
+          ::
+              %ring
+            =/  rac  (clan:title our.sed)
+            ?:  ?=(%earl rac)
+              ~|(%ring-no-earl !!)
+            ?:  ?&  ?=(%pawn rac)
+                    !=(1 lyf.sed)
+                ==
+              ~|(%pawn-life !!)
+            ?:  fak
+              ~|(%fake-no-secrets !!)
+            =/  cub=acru  (nol:nu:crub:crypto key.sed)
+            [our.sed cub (buck our.sed lyf.sed cub fak)]
           ==
       ~&  [%ames-init our pub:ex:cub]
       :-  [%beer our pac:ex:cub]~
       %_  fox
-        ton  (~(ha go ton.fox) our (buck our cub fak))
+        ton  (~(ha go ton.fox) our buq)
         fak.ton  fak
       ==
     ++  come                                            ::    come:am
@@ -1088,7 +1096,7 @@
       |=  [our=ship ger=@uw fak=?]                      ::  instantiate emperor
       ^-  [p=(list boon) q=fort]
       :: XX remove indirection
-      (init [%gene our ger] fak)
+      (init [%gene our 1 ger] fak)
     ::
     ++  gnaw                                            ::    gnaw:am
       |=  [kay=cape ryn=lane pac=rock]                  ::  process packet
@@ -1870,8 +1878,12 @@
         ?-    -.kyz
             %barn
           [~ fox(gad hen)]
+        ::
             %cash
           (~(have am [now fox]) p.kyz q.kyz)
+        ::
+            %dawn
+          (~(init am [now fox]) p.kyz q.kyz)
         ::
             %hear
           (~(gnaw am [now fox]) %good p.kyz q.kyz)

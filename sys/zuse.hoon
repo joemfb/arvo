@@ -435,6 +435,7 @@
       $%  {$barn $~}                                    ::  new unix process
           {$crud p/@tas q/(list tank)}                  ::  error with trace
           {$cash p/@p q/buck}                           ::  civil license
+          {$dawn p/seed q/?}                            ::  boot [params fake?]
           {$hear p/lane q/@}                            ::  receive packet
           {$halo p/lane q/@ r/ares}                     ::  hole with trace
           {$hole p/lane q/@}                            ::  packet failed
@@ -579,6 +580,24 @@
     ==                                                  ::
   ++  rock  @uvO                                        ::  packet
   ++  sect  ?($black $blue $red $orange $white)         ::  banner
+  :: +seed: identity parameters
+  ::
+  ::   XX add hierarchical key derivations?
+  ::
+  +=  seed
+    $%  :: mine a comet under a star
+        ::
+        [%come tar=ship eny=@uvJ]
+        :: generator a la +pope
+        ::
+        [%gene our=ship lyf=life gen=@uw]
+        :: moon from private keys and parent sig
+        ::
+        [%moon our=ship lyf=life key=ring sig=@ux sep=step]
+        :: direct from private keys
+        ::
+        [%ring our=ship lyf=life key=ring]
+    ==
   ++  shed                                              ::  packet flow
     $:  $:  rtt/@dr                                     ::  smoothed rtt
             rto/@dr                                     ::  retransmit timeout
