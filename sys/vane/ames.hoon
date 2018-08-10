@@ -464,59 +464,41 @@
         ::
         ++  deng
           |=  law=wyll
-          ^-  [(list boon) _+>.$]
-          ?:  ?|  =(~ law)
-                  =(lew.wod.dur law)
-              ==
-            [~ +>.$]
+          ^+  +>.$
+          ?:  |(=(~ law) =(lew.wod.dur law))
+            +>.$
           ~|  [%deng-fail her]
           ?>  ?=([^ ~] law)
           =*  wed  i.law
-          =/  loy  (com:nu:crub:crypto r.q.wed)
-          =/  sef=?  .=  (sure:as:loy *code p.wed)
-                     (some (shaf %self (sham q.wed)))
-          ?-  (clan:title her)
-              %earl
-            =/  seg  (sein:title her)
-            =/  hax  (shaf %earl (sham q.wed))
-            ?.  =(our seg)
+          ?>  ^-  ?
+            ?-  (clan:title her)
+                %earl
+              =/  seg  (sein:title her)
+              =/  cub=acru
+                ?:  =(our seg)
+                  q:sen
+                r:~(cluy lax [seg (~(got by hoc.saf) seg)])
               :: signed by parent
               ::
-              =/  cub  r:~(cluy lax [seg (~(got by hoc.saf) seg)])
-              ?>  =(hax (need (sure:as:cub *code p.wed)))
-              [~ +>.$(lew.wod.dur law)]
-            =/  cub  q:sen
-            ?.  sef
-              :: signed by parent (us)
+              =((shaf %earl (sham q.wed)) (need (sure:as:cub *code p.wed)))
+            ::
+                %pawn
+              =/  cub=acru  (com:nu:crub:crypto r.q.wed)
+              :: self-signed, life 1, address is fingerprint
               ::
-              ?>  =(hax (need (sure:as:cub *code p.wed)))
-              [~ +>.$(lew.wod.dur law)]
-            :: self-signed, must be upgraded
+              ?&  =((shaf %self (sham q.wed)) (need (sure:as:cub *code p.wed)))
+                  ?=(%1 p.p.q.wed)
+                  =(`@`fig:ex:cub r.p.q.wed)
+              ==
             ::
-            =/  tic  (end 6 1 (shaf %tick (mix her (shax sec:ex:cub))))
-            =/  pub  pub:ex:(pit:nu:crub:crypto 512 tic)
-            ?>  ?&  =(~ lew.wod.dur)
-                    =(pub r.q.wed)
-                ==
-            :_  +>.$(lew.wod.dur law)
-            [%curd [our her] wed(p (sign:as:cub *code hax)) ~]~
-          ::
-              %pawn
-            :: self-signed, life 1, address is fingerprint
-            ::
-            ?>  ?&  =(~ lew.wod.dur)
-                    sef
-                    ?=(%1 p.p.q.wed)
-                    =(`@`fig:ex:loy r.p.q.wed)
-                ==
-            [~ +>.$(lew.wod.dur law)]
-          ::
-              *
-            :: self-signed, our sponsor
-            ::
-            ?>  &(sef =(her (sein:title our)))
-            [~ +>.$(lew.wod.dur law)]
-          ==
+                *
+              :: our initial sponsor
+              ::
+              :: XX ensure initial?
+              ::
+              =(her (sein:title our))
+            ==
+          +>.$(lew.wod.dur law)
         ::
         ++  griz                                        ::    griz:lax:as:go
           |=  now=@da                                   ::  generate key for
@@ -1354,8 +1336,7 @@
                   %full
                 ::  ~&  %chew-full
                 =+  mex=((hard ,[p=[p=life q=life] q=wyll r=@]) (cue msg))
-                =^  nib  diz  (deng:diz q.mex)
-                =.  +>.$  (emir nib)
+                =.  diz  (deng:diz q.mex)
                 =+  wug=cluy:diz
                 ?>  =(q.p.mex p.wug)
                 =+  gey=(sev:gus p.p.mex)
@@ -1367,8 +1348,7 @@
                   %open
                 ::  ~&  %chew-open
                 =+  mex=((hard ,[p=[~ q=life] q=wyll r=@]) (cue msg))
-                =^  nib  diz  (deng:diz q.mex)
-                =.  +>.$  (emir nib)
+                =.  diz  (deng:diz q.mex)
                 =+  wug=cluy:diz
                 ?>  =(q.p.mex p.wug)
                 =+  mes=(need (sure:as:r.wug *code r.mex))
@@ -1751,10 +1731,6 @@
       :_  fox
       :~  [s.bon %give %woot q.p.bon r.bon]
       ==
-    ::
-        %curd
-      =/  pax  /(scot %p p.p.bon)/(scot %p q.p.bon)/ta
-      :_  fox  [hen %pass pax %g %deal p.bon %hood %poke %will !>([~ q.bon])]~
     ::
         %mead  :_(fox [[hen [%give %hear p.bon q.bon]] ~])
         %milk
